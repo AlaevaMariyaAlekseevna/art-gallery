@@ -315,3 +315,137 @@ h1, h2, h3 {
     font-size: 0.9rem;
     margin-top: 0.5rem;
 }
+/* Стили для страницы контактов */
+.contact-info {
+    margin-bottom: 3rem;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+.contact-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contact-form-section {
+    margin-bottom: 3rem;
+}
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.form-group textarea {
+    min-height: 150px;
+}
+.submit-btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #e67e22;
+}
+.map-section {
+    margin-bottom: 3rem;
+}
+.map-container {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.static-map {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.social-media {
+    text-align: center;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.social-links a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+/* Анимационные классы для будущей реализации */
+[data-animate="fadeIn"] {
+    opacity: 0;
+    transform: translateY(20px);
+}
+[data-animate="slideUp"] {
+    opacity: 0;
+    transform: translateY(50px);
+}
+/* Адаптивность */
+@media (max-width: 992px) {
+    .info-blocks, .events-grid, .contact-grid, .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }   
+    .exhibition-item {
+        flex-direction: column;
+    }
+    .exhibition-item img {
+        width: 100%;
+        height: 200px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }   
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 1rem;
+    }
+    
+    .slider-container {
+        height: 300px;
+    }
+    .info-blocks, .events-grid, .contact-grid, .details-grid {
+        grid-template-columns: 1fr;
+    }
+    .sort-options {
+        flex-wrap: wrap;
+    }
+}
