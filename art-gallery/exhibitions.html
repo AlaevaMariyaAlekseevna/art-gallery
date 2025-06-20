@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текущие выставки | Галерея "Вдохновение"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Галерея "Вдохновение"</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="exhibitions.html" class="active">Выставки</a></li>
+                <li><a href="gallery.html">Коллекция</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="exhibitions-header">
+            <h1>Текущие выставки</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Поиск выставок...">
+                <button id="search-button">Найти</button>
+            </div>
+            <div class="sort-options">
+                <span>Сортировать по:</span>
+                <button class="sort-btn" data-sort="date">Дате</button>
+                <button class="sort-btn" data-sort="name">Названию</button>
+                <button class="sort-btn" data-sort="popularity">Популярности</button>
+            </div>
+        </section>
+        <section class="exhibitions-list">
+            <div class="exhibition-item" data-date="2023-06-10" data-name="Современное искусство" data-popularity="85">
+                <img src="images/7c2ba6548114c5b244c45e773019ebb5.png" alt="Современное искусство">
+                <div class="exhibition-info">
+                    <h2>Современное искусство: новые имена</h2>
+                    <p class="date">10 июня - 10 июля 2023</p>
+                    <p class="description">Экспозиция представляет работы молодых художников, работающих в различных техниках и направлениях.</p>
+                    <span class="popularity">★ 4.8/5</span>
+                </div>
+            </div>
+            <div class="exhibition-item" data-date="2023-06-15" data-name="Русский авангард" data-popularity="92">
+                <img src="images/967ed88c338b50e9af97c048a80c281b.jpg" alt="Русский авангард">
+                <div class="exhibition-info">
+                    <h2>Русский авангард: революция в искусстве</h2>
+                    <p class="date">15 июня - 15 августа 2023</p>
+                    <p class="description">Уникальная коллекция работ художников русского авангарда из частных собраний.</p>
+                    <span class="popularity">★ 4.9/5</span>
+                </div>
+            </div>
+            <div class="exhibition-item" data-date="2023-06-20" data-name="Итальянское возрождение" data-popularity="78">
+                <img src="images/vozrozhdenie(9).webp" alt="Итальянское возрождение">
+                <div class="exhibition-info">
+                    <h2>Шедевры итальянского Возрождения</h2>
+                    <p class="date">20 июня - 20 сентября 2023</p>
+                    <p class="description">Репродукции знаменитых работ мастеров эпохи Возрождения в высоком разрешении.</p>
+                    <span class="popularity">★ 4.7/5</span>
+                </div>
+            </div>
+            <div class="exhibition-item" data-date="2023-07-01" data-name="Японская гравюра" data-popularity="81">
+                <img src="images/3eb635470d564298a3e977455eff5d52.jpg" alt="Японская гравюра">
+                <div class="exhibition-info">
+                    <h2>Мир укиё-э: японская гравюра</h2>
+                    <p class="date">1 июля - 1 октября 2023</p>
+                    <p class="description">Коллекция традиционных японских гравюр XVIII-XIX веков.</p>
+                    <span class="popularity">★ 4.8/5</span>
+                </div>
+            </div>
+        </section>
+        <section class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn next">Следующая →</button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Галерея искусств "Вдохновение". Все права защищены.</p>
+    </footer>
+</body>
+</html>
