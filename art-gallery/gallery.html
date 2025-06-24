@@ -18,7 +18,6 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="artwork-gallery">
             <div class="main-image">
@@ -31,11 +30,9 @@
                 <img src="images/14480024042025_c7c2d6650fe8dd3125b1541cb39af56649bd56fa.jpg" alt="Звездная ночь - рамка" class="thumbnail">
             </div>
         </section>
-
         <section class="artwork-details">
             <h1>"Звездная ночь"</h1>
             <h2>Винсент Ван Гог, 1889</h2>
-            
             <div class="details-grid">
                 <div class="detail-item">
                     <h3>Техника</h3>
@@ -54,48 +51,76 @@
                     <p>Постимпрессионизм</p>
                 </div>
             </div>
-
             <div class="artwork-description">
                 <h3>Описание</h3>
                 <p>"Звездная ночь" - одна из самых известных картин Винсента Ван Гога, написанная во время его пребывания в лечебнице Сен-Поль-де-Мозоль в Сен-Реми-де-Прованс. На картине изображено ночное небо над вымышленной деревней, возможно, вдохновленной видами из окна его комнаты.</p>
                 <p>Особенностью картины являются динамичные, вихревые мазки, создающие ощущение движения в небе. Кипарис на переднем плане, достигающий неба, часто интерпретируется как символ связи земли и неба, смерти и вечности.</p>
             </div>
         </section>
-
         <section class="reviews">
             <h2>Отзывы посетителей</h2>
-            
-            <div class="review-item">
-                <div class="review-header">
-                    <span class="review-author">Анна К.</span>
-                    <span class="review-rating">★★★★★</span>
+            <div id="reviews-container">
+                <!-- Отзывы будут загружаться здесь -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="review-author">Анна К.</span>
+                        <span class="review-rating">★★★★★</span>
+                    </div>
+                    <p class="review-text">Потрясающая картина! Видеть ее вживую - совершенно другой опыт, чем на репродукциях. Энергия мазков просто завораживает.</p>
+                    <p class="review-date">15 мая 2023</p>
                 </div>
-                <p class="review-text">Потрясающая картина! Видеть ее вживую - совершенно другой опыт, чем на репродукциях. Энергия мазков просто завораживает.</p>
-                <p class="review-date">15 мая 2023</p>
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="review-author">Михаил П.</span>
+                        <span class="review-rating">★★★★☆</span>
+                    </div>
+                    <p class="review-text">Очень мощное впечатление, но хотелось бы больше информации о технике создания и истории картины прямо рядом с экспозицией.</p>
+                    <p class="review-date">3 мая 2023</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="review-author">Елена С.</span>
+                        <span class="review-rating">★★★★★</span>
+                    </div>
+                    <p class="review-text">Этот шедевр стоит того, чтобы приехать в галерею специально для него. Особенно впечатляет игра света на рельефных мазках краски.</p>
+                    <p class="review-date">22 апреля 2023</p>
+                </div>
             </div>
-
-            <div class="review-item">
-                <div class="review-header">
-                    <span class="review-author">Михаил П.</span>
-                    <span class="review-rating">★★★★☆</span>
-                </div>
-                <p class="review-text">Очень мощное впечатление, но хотелось бы больше информации о технике создания и истории картины прямо рядом с экспозицией.</p>
-                <p class="review-date">3 мая 2023</p>
-            </div>
-
-            <div class="review-item">
-                <div class="review-header">
-                    <span class="review-author">Елена С.</span>
-                    <span class="review-rating">★★★★★</span>
-                </div>
-                <p class="review-text">Этот шедевр стоит того, чтобы приехать в галерею специально для него. Особенно впечатляет игра света на рельефных мазках краски.</p>
-                <p class="review-date">22 апреля 2023</p>
+            <div class="add-review">
+                <h3>Добавить отзыв</h3>
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="review-author">Ваше имя:</label>
+                        <input type="text" id="review-author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-rating">Оценка:</label>
+                        <select id="review-rating" required>
+                            <option value="5">★★★★★</option>
+                            <option value="4">★★★★☆</option>
+                            <option value="3">★★★☆☆</option>
+                            <option value="2">★★☆☆☆</option>
+                            <option value="1">★☆☆☆☆</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Ваш отзыв:</label>
+                        <textarea id="review-text" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить отзыв</button>
+                </form>
             </div>
         </section>
     </main>
-
     <footer>
         <p>© 2023 Галерея искусств "Вдохновение". Все права защищены.</p>
     </footer>
+    <!-- Модальное окно для увеличенного изображения -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
